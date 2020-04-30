@@ -1,0 +1,59 @@
+{
+  "name": "test",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "doc": "docsify serve ./docs --open",
+    "dev": "vue-cli-service serve --project",
+    "serve": "vue-cli-service serve --project",
+    "build": "vue-cli-service build --project",
+    "lint": "vue-cli-service lint",
+    "serve:dev": "vue-cli-service serve --mode development --project",
+    "serve:test": "vue-cli-service serve --mode test --project",
+    "serve:pre": "vue-cli-service serve --mode preview --project",
+    "serve:pro": "vue-cli-service serve --mode production --project",
+    "build:dev": "vue-cli-service build --mode development --project",
+    "build:test": "vue-cli-service build --mode test --project",
+    "build:pre": "vue-cli-service build --mode preview --project",
+    "build:pro": "vue-cli-service build --mode production --project"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.6",
+    "vuex": "^3.1.3"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
+    "@vue/cli-plugin-babel": "~4.3.0",
+    "@vue/cli-plugin-eslint": "~4.3.0",
+    "@vue/cli-plugin-router": "~4.3.0",
+    "@vue/cli-plugin-vuex": "~4.3.0",
+    "@vue/cli-service": "~4.3.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-component": "^1.1.1",
+    "copy-webpack-plugin": "^5.1.1",
+    "docsify-cli": "^4.4.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "glob": "^7.1.6",
+    "html-withimg-loader": "^0.1.16",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "vue-template-compiler": "^2.6.11",
+    "zip-webpack-plugin": "^3.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
